@@ -443,6 +443,9 @@ AddEventHandler("police_job:unziptie", function()
     uncuffPed(targetPed, "zipties")
 end)
 
+-- used by ambulance_job to drop hands on death
+exports("toggleHandsUp", toggleHandsUp)
+
 exports("ziptie", function(data, slot)
     if cache.vehicle then return end
     local targetPed = getTargetPed()

@@ -4,9 +4,8 @@ use_experimental_fxv2_oal 'yes'
 lua54 'yes'
 
 name 'police_job'
-author 'police_job contributors (see README.md for credits)'
-description 'Standalone police job: no framework and no inventory needed. Permissions come straight from FXServer ACE groups.'
-license 'GPL-3.0'
+author '10shepherd'
+description 'Standalone police job'
 version '1.0.0'
 
 files {

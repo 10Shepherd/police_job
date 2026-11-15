@@ -1,7 +1,7 @@
 local data = lib.load("data.officerBlips")
 local activeBlips = {}
 
--- blips for on-duty EMS, only used if an ambulance resource sends them
+-- blips for on-duty EMS, only used if ambulance_job is running
 local emsData = {
     sprites = { foot = 1, car = 56, bike = 225, heli = 64 },
     color = 8, -- pink
@@ -66,7 +66,7 @@ RegisterNetEvent("police_job:officerBlips", function(snapshot)
 end)
 
 -- EMS blips
-RegisterNetEvent("ND_Ambulance:emsBlips", function(snapshot)
+RegisterNetEvent("ambulance_job:emsBlips", function(snapshot)
     if not Bridge.isOnDuty() then
         removeAllBlips(activeEmsBlips)
         return

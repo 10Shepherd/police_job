@@ -106,6 +106,7 @@ exports.police_job:cuff()                         -- cuff / ziptie / uncuff the 
 exports.police_job:ziptie()
 exports.police_job:uncuff()
 exports.police_job:deploySpikestrip()
+exports.police_job:toggleHandsUp(status, animType) -- animType: "hu" standing, "huk" kneeling
 ```
 
 The client-side `isOnDuty` is fine for hiding a button, but always check
@@ -130,6 +131,9 @@ server-side before letting anything actually happen.
 - `shareWithStates` in `data/officerBlips.lua` lists extra player state bag
   keys (e.g. an EMS resource's own on-duty flag) whose holders also receive
   officer positions.
+- `ambulance_job` (the companion EMS resource): on-duty police and EMS see
+  each other's blips, and it uses the `toggleHandsUp` export to drop a
+  player's hands when they go down.
 
 ## Limitations
 
