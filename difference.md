@@ -15,15 +15,15 @@ Last updated: 2026-11-15
 
 ## Summary
 
-| Area                                 | Original                        | This version                                    |
-| ------------------------------------ | ------------------------------- | ----------------------------------------------- |
-| Framework                            | Requires ND_Core, ESX or QBCore | None; standalone only                           |
-| Inventory                            | Requires ox_inventory           | None                                            |
-| Who is police                        | Job/group from the framework    | FXServer ACE groups, plus being clocked on duty |
-| Cuffs, zipties, GSR kit              | Inventory items                 | No items; gated on duty status                  |
-| Jail                                 | Separate resource               | Built in, stored in MySQL                       |
-| Callsigns and officer blips          | Not present                     | Added                                           |
-| Locker rooms, shotspotter, shield, spikestrips | Present               | Removed                                         |
+| Area                                           | Original                        | This version                                    |
+| ---------------------------------------------- | ------------------------------- | ----------------------------------------------- |
+| Framework                                      | Requires ND_Core, ESX or QBCore | None; standalone only                           |
+| Inventory                                      | Requires ox_inventory           | None                                            |
+| Who is police                                  | Job/group from the framework    | FXServer ACE groups, plus being clocked on duty |
+| Cuffs, zipties, GSR kit                        | Inventory items                 | No items; gated on duty status                  |
+| Jail                                           | Separate resource               | Built in, stored in MySQL                       |
+| Callsigns and officer blips                    | Not present                     | Added                                           |
+| Locker rooms, shotspotter, shield, spikestrips | Present                         | Removed                                         |
 
 ## Removed
 

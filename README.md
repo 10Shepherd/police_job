@@ -64,15 +64,15 @@ first start.
 
 ## Configuration
 
-| File                    | What it controls                                                                                                                                       |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `data/config.lua`       | Police ACE groups, duty command name, `/jail` and `/unjail` groups, GSR timers, impound price range, permission refresh interval                       |
-| `data/dutyPeds.lua`     | Model and position of each duty ped                                                                                                                    |
-| `data/jail.lua`         | Prison/release coordinates, maximum sentence, escape zone, optional Discord webhook log                                                                |
-| `data/officerBlips.lua` | Blip sprites, colour, update interval, who else receives officer positions                                                                             |
-| `data/weaponAmmo.lua`   | Which weapons leave evidence, and of what calibre (add your add-on weapons here)                                                                       |
-| `data/evidence.lua`     | Labels for each ammo type                                                                                                                              |
-| `locales/en.json`       | All player-facing text                                                                                                                                 |
+| File                    | What it controls                                                                                                                 |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `data/config.lua`       | Police ACE groups, duty command name, `/jail` and `/unjail` groups, GSR timers, impound price range, permission refresh interval |
+| `data/dutyPeds.lua`     | Model and position of each duty ped                                                                                              |
+| `data/jail.lua`         | Prison/release coordinates, maximum sentence, escape zone, optional Discord webhook log                                          |
+| `data/officerBlips.lua` | Blip sprites, colour, update interval, who else receives officer positions                                                       |
+| `data/weaponAmmo.lua`   | Which weapons leave evidence, and of what calibre (add your add-on weapons here)                                                 |
+| `data/evidence.lua`     | Labels for each ammo type                                                                                                        |
+| `locales/en.json`       | All player-facing text                                                                                                           |
 
 ACE groups are re-checked every `permissionRefreshInterval` seconds, so a
 promotion or demotion applies without a reconnect. Losing the group while on
