@@ -48,7 +48,6 @@ client_scripts {
     'client/escort.lua',
     'client/evidence.lua',
     'client/gsr.lua',
-    'client/spikes.lua',
     'client/duty.lua',
     'client/callsigns.lua',
     'client/officerBlips.lua',

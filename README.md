@@ -19,9 +19,6 @@ clocked on duty.
   `clearGSR` minutes, or sooner in water.
 - **Evidence**: shots drop casings and projectiles that on-duty officers
   can collect.
-- **Spikestrips**: a per-officer allowance issued at clock-on
-  (`maxSpikestrips`), deployed with a keybind (unbound by default, set it
-  under Settings > Key Bindings > FiveM) and picked back up with `ox_target`.
 - **Impound**: removes a vehicle from the world.
 - **Jail**: sentence a cuffed player for a number of minutes. Sentences
   persist in MySQL, survive reconnects and resource restarts, and leaving
@@ -69,7 +66,7 @@ first start.
 
 | File                    | What it controls                                                                                                                                       |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `data/config.lua`       | Police ACE groups, duty command name, `/jail` and `/unjail` groups, GSR timers, impound price range, spikestrip allowance, permission refresh interval |
+| `data/config.lua`       | Police ACE groups, duty command name, `/jail` and `/unjail` groups, GSR timers, impound price range, permission refresh interval                       |
 | `data/dutyPeds.lua`     | Model and position of each duty ped                                                                                                                    |
 | `data/jail.lua`         | Prison/release coordinates, maximum sentence, escape zone, optional Discord webhook log                                                                |
 | `data/officerBlips.lua` | Blip sprites, colour, update interval, who else receives officer positions                                                                             |
@@ -105,7 +102,6 @@ exports.police_job:isOnDuty()                     -- boolean, for UI only
 exports.police_job:cuff()                         -- cuff / ziptie / uncuff the closest player
 exports.police_job:ziptie()
 exports.police_job:uncuff()
-exports.police_job:deploySpikestrip()
 exports.police_job:toggleHandsUp(status, animType) -- animType: "hu" standing, "huk" kneeling
 ```
 

@@ -21,9 +21,6 @@ return {
     maxImpoundPrice = 500,
     defaultImpoundPrice = 200, -- this should be within the max and min above.
 
-    -- spikestrips an officer gets when going on duty
-    maxSpikestrips = 3,
-
     -- seconds between ACE group re-checks
     permissionRefreshInterval = 30
 }

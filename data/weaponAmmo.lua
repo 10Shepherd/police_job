@@ -19,18 +19,6 @@ return {
     [`WEAPON_CERAMICPISTOL`] = 'ammo-50',
     [`WEAPON_APPISTOL`] = 'ammo-45',
     [`WEAPON_PISTOL50`] = 'ammo-50',
-    -- add-on pistols
-    [`WEAPON_GLOCK17`] = 'ammo-9',
-    [`WEAPON_GLOCK19`] = 'ammo-9',
-    [`WEAPON_M9A3`] = 'ammo-9',
-    [`WEAPON_MP`] = 'ammo-9',
-    [`WEAPON_P226R`] = 'ammo-9',
-    [`WEAPON_SAFETYPISTOL`] = 'ammo-9', -- SIG P320
-    [`WEAPON_P320C`] = 'ammo-9',
-    [`WEAPON_P99`] = 'ammo-9',
-    [`WEAPON_FN509`] = 'ammo-9',
-    [`WEAPON_MODEL659`] = 'ammo-9',
-    [`WEAPON_TX22`] = 'ammo-22', -- Taurus TX22 is genuinely .22 LR
 
     -- ===== Assault Rifles =====
     [`WEAPON_ASSAULTRIFLE`] = 'ammo-rifle',
@@ -47,17 +35,6 @@ return {
     [`WEAPON_TACTICALRIFLE`] = 'ammo-rifle',
     [`WEAPON_HEAVYRIFLE`] = 'ammo-rifle',
     [`WEAPON_BATTLERIFLE`] = 'ammo-rifle',
-    -- add-on rifles
-    [`WEAPON_PM4`] = 'ammo-rifle',
-    [`WEAPON_R9`] = 'ammo-rifle',
-    [`WEAPON_AR15RIS2`] = 'ammo-rifle',
-    [`WEAPON_AR15RIS3`] = 'ammo-rifle',
-    [`WEAPON_M27`] = 'ammo-rifle',
-    [`WEAPON_M16A1`] = 'ammo-rifle',
-    [`WEAPON_M4`] = 'ammo-rifle',
-    [`WEAPON_M4A1`] = 'ammo-rifle',
-    [`WEAPON_HK416B`] = 'ammo-rifle',
-    [`WEAPON_SCARH`] = 'ammo-rifle',
 
     -- ===== Shotguns =====
     [`WEAPON_PUMPSHOTGUN`] = 'ammo-shotgun',
@@ -70,11 +47,8 @@ return {
     [`WEAPON_AUTOSHOTGUN`] = 'ammo-shotgun',
     [`WEAPON_COMBATSHOTGUN`] = 'ammo-shotgun',
     [`WEAPON_MUSKET`] = 'ammo-musket',
-    -- add-on shotguns
-    [`WEAPON_590`] = 'ammo-shotgun',
-    [`WEAPON_BEANBAG`] = 'ammo-shotgun',
-    [`WEAPON_BENELLI`] = 'ammo-shotgun',
-    [`WEAPON_SUPERNOVA`] = 'ammo-shotgun',
+    -- add-on shotgun: Shrewsbury Riot Shotgun (less-lethal, same 12-gauge shells)
+    [`WEAPON_RIOTSHOTGUN`] = 'ammo-shotgun',
 
     -- ===== Sub-/Light Machine Guns =====
     [`WEAPON_MICROSMG`] = 'ammo-9',
@@ -96,7 +70,4 @@ return {
     [`WEAPON_MARKSMANRIFLE`] = 'ammo-sniper',
     [`WEAPON_MARKSMANRIFLE_MK2`] = 'ammo-sniper',
     [`WEAPON_PRECISIONRIFLE`] = 'ammo-sniper',
-    [`WEAPON_TACTICALSNIPER`] = 'ammo-sniper',
-    [`WEAPON_TACTICALSNIPER_FDE`] = 'ammo-sniper',
-    [`WEAPON_TACTICALSNIPER_TANODIZED`] = 'ammo-sniper',
 }

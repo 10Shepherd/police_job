@@ -40,23 +40,6 @@ for i = 1, #trackedGroupList do
     ExecuteCommand(('add_ace %s %s allow'):format(group, group))
 end
 
--- spikestrips per officer, given on clock-on, not saved
-local spikeCount = {}
-
-function bridge.getSpikeCount(src)
-    return spikeCount[src] or 0
-end
-
-function bridge.adjustSpikeCount(src, delta)
-    local current = spikeCount[src]
-    if not current then return false end
-    local new = current + delta
-    if new < 0 then return false end
-    spikeCount[src] = math.min(config.maxSpikestrips, new)
-    Player(src).state:set("spikeCount", spikeCount[src], true)
-    return true
-end
-
 function bridge.isOnDuty(src)
     return Player(src).state.onDuty == true
 end
@@ -69,14 +52,6 @@ function bridge.setDuty(src, status)
 
     local state = Player(src).state
     state:set("onDuty", status, true)
-
-    if status then
-        spikeCount[src] = config.maxSpikestrips
-        state:set("spikeCount", spikeCount[src], true)
-    else
-        spikeCount[src] = nil
-        state:set("spikeCount", nil, true)
-    end
 
     -- optional hud resource support
     if GetResourceState("hud") == "started" then
@@ -123,10 +98,6 @@ AddEventHandler("playerJoining", function()
     SetTimeout(3000, function()
         refreshPlayer(src)
     end)
-end)
-
-AddEventHandler("playerDropped", function()
-    spikeCount[source] = nil
 end)
 
 -- refresh players already online when the resource starts

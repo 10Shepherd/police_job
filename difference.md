@@ -20,10 +20,10 @@ Last updated: 2026-11-15
 | Framework                            | Requires ND_Core, ESX or QBCore | None; standalone only                           |
 | Inventory                            | Requires ox_inventory           | None                                            |
 | Who is police                        | Job/group from the framework    | FXServer ACE groups, plus being clocked on duty |
-| Cuffs, zipties, GSR kit, spikestrips | Inventory items                 | No items; gated on duty status                  |
+| Cuffs, zipties, GSR kit              | Inventory items                 | No items; gated on duty status                  |
 | Jail                                 | Separate resource               | Built in, stored in MySQL                       |
 | Callsigns and officer blips          | Not present                     | Added                                           |
-| Locker rooms, shotspotter, shield    | Present                         | Removed                                         |
+| Locker rooms, shotspotter, shield, spikestrips | Present               | Removed                                         |
 
 ## Removed
 
@@ -36,6 +36,11 @@ Last updated: 2026-11-15
 - **Riot shield** (`client/shield.lua`) and the gun-animation resource it
   depended on. Use a separate shield script and gate it with the
   `isOnDuty` export.
+- **Spikestrips** (`client/spikes.lua`, the two `police_job:*Spikestrip`
+  server events, the per-officer allowance and its locale strings). The
+  `p_ld_stinger_s` prop is no longer registered with `ox_target` and the
+  "Deploy spikestrip" keybind is gone. Use a dedicated spikestrip resource
+  and gate it with the `isOnDuty` export.
 - **Swedish locale.** English only.
 - **Character-specific logic** (clearing state on character switch, saving
   outfits to a character). There is no character system here.
@@ -56,11 +61,8 @@ Last updated: 2026-11-15
 ### Items replaced by duty status
 
 - Cuffing, zipties, uncuffing, escorting, searching, GSR testing,
-  collecting evidence, spikestrips and impounding all require the officer
-  to be on duty. None of them need an item.
-- **Spikestrips** use a per-officer allowance (`maxSpikestrips`) issued at
-  clock-on and tracked in memory, instead of an inventory count. Deploying
-  is on a keybind and an export.
+  collecting evidence and impounding all require the officer to be on duty.
+  None of them need an item.
 - **Evidence** no longer becomes an inventory item. Collecting it shows
   what was found and fires the server event `police_job:evidenceCollected`.
 - **Searching a player** no longer opens their inventory. It reports whether
@@ -115,9 +117,6 @@ Problems found in the original code or introduced while porting, and fixed:
   the option never appeared for a prisoner sitting there.
 - Escort, release, place-in-vehicle and take-out options were shown to
   everyone; they now require being on duty.
-- Picking up a spikestrip did not check that the entity was a spikestrip, so
-  the event could delete other nearby networked entities. Deploying now also
-  requires both ends of the strip to be near the officer.
 - Impound now checks the entity is actually a vehicle.
 - Evidence submitted by a client is validated (shape, known ammo type,
   distance from the player) and capped per update. Collecting evidence
